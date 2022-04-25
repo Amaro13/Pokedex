@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/style.css" rel="stylesheet" />
+    <title>Register</title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs')%>
+    <main>
+      <form method="post" action="/cadastro">
+        <fieldset id="title">
+          <legend>Registration</legend>
+
+          <fieldset>
+            <label for="number">Number</label>
+            <input type="text" name="number" />
+          </fieldset>
+
+          <fieldset>
+            <label for="name">Name</label>
+            <input type="text" name="name" />
+          </fieldset>
+
+          <fieldset>
+            <label for="type">Type</label>
+            <input type="text" name="type" />
+          </fieldset>
+
+          <fieldset>
+            <label for="category">Category</label>
+            <input type="text" name="category" />
+          </fieldset>
+
+          <fieldset>
+            <label for="abilities">Abilities</label>
+            <input type="text" name="abilities" />
+          </fieldset>
+
+          <fieldset>
+            <label for="height">Height</label>
+            <input type="text" name="height" />
+          </fieldset>
+
+          <fieldset>
+            <label for="weight">Weight</label>
+            <input type="text" name="weight" />
+          </fieldset>
+
+          <fieldset>
+            <label for="description">Description</label>
+            <input type="text" name="description" />
+          </fieldset>
+
+          <fieldset>
+            <label for="img">Image url</label>
+            <input type="url" name="img" />
+          </fieldset>
+
+          <button type="submit">Save</button>
+        </fieldset>
+      </form>
+    </main>
+    <%- include('./partials/footer.ejs')%>
+  </body>
+</html>

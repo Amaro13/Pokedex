@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/style.css" rel="stylesheet" />
+    <title>Details</title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs')%>
+    <main>
+      <section id="detalhes">
+        <div class="head">
+          <h1><%= pokemon.name %></h1>
+          <img src="<%= pokemon.img%>" alt="<%= pokemon.name%>" />
+        </div>
+        <table>
+          <!-- <tr> </tr> table row = linha da tabela -->
+          <!-- <td> </td> table dir = coluna da tabela -->
+          <!-- <thead> </thead> <!-- Cabeçalho da Tabela -->
+          <!-- <tbody> </tbody> <!-- Corpo da minha tabela -->
+          <!-- <tfoot> </tfoot> Rodapé da minha da tabela -->
+          <!-- th === td - usado para o thead -->
+
+          <thead>
+            <th colspan="2">Details</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Number</td>
+              <td><%= pokemon.number %></td>
+            </tr>
+
+            <tr>
+              <td>Nome</td>
+              <td><%= pokemon.name %></td>
+            </tr>
+
+            <tr>
+              <td>Type</td>
+              <td><%= pokemon.type %></td>
+            </tr>
+
+            <tr>
+              <td>Category</td>
+              <td><%= pokemon.category %></td>
+            </tr>
+
+            <tr>
+              <td>Abilities</td>
+              <td><%= pokemon.abilities %></td>
+            </tr>
+
+            <tr>
+              <td>Height</td>
+              <td><%= pokemon.height %></td>
+            </tr>
+
+            <tr>
+              <td>Weight</td>
+              <td><%= pokemon.weight %></td>
+            </tr>
+
+            <tr>
+              <td>Description</td>
+              <td><%= pokemon.description %></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <%- include('./partials/footer.ejs')%>
+  </body>
+</html>

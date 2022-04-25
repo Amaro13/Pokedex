@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Play";
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+}
+
+header {
+  height: 10%;
+  background-color: darkgoldenrod;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img#pokedex {
+  height: 100%;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  margin: 20px;
+  gap: 20px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+header a:hover {
+  color: rgb(255, 0, 0);
+}
+
+main {
+  min-height: 80%;
+  /* padding: 10px; */
+}
+
+footer {
+  height: 10%;
+  background-color: darkgoldenrod;
+  display: flex;
+  margin-top: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+section#Pokemons {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 16px; */
+  justify-content: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+article.pokes {
+  height: 50vh;
+  width: 30vw;
+}
+
+article.pokes div.images {
+  height: 80%;
+  text-align: center;
+  display: block;
+  border: 1px solid green;
+}
+
+article.pokes img {
+  height: 100%;
+  /* object-fit: fill; */
+}
+
+article.pokes div.pokename {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: underline;
+  border: 1px solid green;
+}
+
+section#detalhes {
+  display: flex;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  gap: 16px;
+  justify-content: center;
+  /* align-items: center; */
+  align-content: center;
+  text-align: center;
+  padding-top: 10vh;
+  margin: auto;
+  height: 50vh;
+  width: 30vw;
+}
+
+section#detalhes img {
+  height: 100%;
+  /* object-fit: fill; */
+}
+
+table td {
+  border: solid 1px green;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+form {
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: flex-end; */
+
+  width: 20%;
+}
+
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+form fieldset fieldset {
+  border: none;
+  display: flex;
+  flex-direction: row;
+}
+
+form fieldset button {
+  gap: 2vh;
+  gap: 2vw;
+}
