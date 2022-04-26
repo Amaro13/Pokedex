@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 import express from "express"; // importando express
 import path from "path"; // serve para definir caminhos padrões
 
@@ -12,7 +12,7 @@ app.use(express.json()); // Converte para JSON
 app.set("view engine", "ejs"); // Faz com que o express reconheça o ejs como motor de visualização
 app.use(express.static(path.join(__dirname, "public")));
 
-const PORT = process.env.PORT || 3001;
+const PORT = 3001 || "https://infinite-mesa-81685.herokuapp.com/";
 
 app.listen(PORT, () => console.log(`Server in http://localhost:${PORT}`));
 
@@ -109,4 +109,6 @@ app.post(`/cadastro`, (req, res) => {
   res.redirect("/");
 });
 
-app.listen(PORT, () => console.log(`Server in http://localhost:${PORT}`));
+app.listen(PORT, () =>
+  console.log(`Servidor rodando em: http://localhost:${PORT}`)
+);
