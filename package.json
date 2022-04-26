@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon -e js,html,css,ejs",
-    "start": "node index.js"
+    "build": "node index.js"
   },
   "author": "Amaro Ribeiro",
   "license": "ISC",
