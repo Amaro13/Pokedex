@@ -1,6 +1,8 @@
-// require("dotenv").config();
+import dotenv from "dotenv";
 import express from "express"; // importando express
 import path from "path"; // serve para definir caminhos padrões
+
+dotenv.config();
 
 const __dirname = path.resolve(path.dirname(``)); // dirname serve para informar o caminho padrão local.
 
@@ -12,9 +14,9 @@ app.use(express.json()); // Converte para JSON
 app.set("view engine", "ejs"); // Faz com que o express reconheça o ejs como motor de visualização
 app.use(express.static(path.join(__dirname, "public")));
 
-const PORT = 3001 || "https://infinite-mesa-81685.herokuapp.com/";
+const port = 3001 || process.env.PORT;
 
-app.listen(PORT, () => console.log(`Server in http://localhost:${PORT}`));
+app.listen(port, () => console.log(`Server in http://localhost:${port}`));
 
 const pokedex = [
   {
@@ -108,7 +110,3 @@ app.post(`/cadastro`, (req, res) => {
   console.log(pokedex);
   res.redirect("/");
 });
-
-app.listen(PORT, () =>
-  console.log(`Servidor rodando em: http://localhost:${PORT}`)
-);
